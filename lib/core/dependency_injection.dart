@@ -1,22 +1,17 @@
 import 'package:get_it/get_it.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:shop_app/feature/cart/data/cart_remote_data_Source/cart_remote_data_source.dart';
+import 'package:shop_app/feature/cart/data/repo/repo_imp.dart';
+import 'package:shop_app/feature/cart/domain/repo/rep.dart';
+import 'package:shop_app/feature/cart/domain/use_case/add_to_cart_item.dart';
+import 'package:shop_app/feature/cart/presnetation/bloc/cart_bloc.dart';
+import 'package:shop_app/feature/products/data/remote_data_sorce/remote_data_source.dart';
+import 'package:shop_app/feature/products/data/repo_imp/repo_imp.dart';
+import 'package:shop_app/feature/products/domain/rep/repo.dart';
+import 'package:shop_app/feature/products/domains/use_case/get_category.dart';
+import 'package:shop_app/feature/products/domains/use_case/get_product.dart';
+import 'package:shop_app/feature/products/presentation/bloc/product_bloc.dart';
 
-import 'package:shop_app/features/cart/data/repositories/cart_repository_impl.dart';
-import 'package:shop_app/features/cart/data/sources/cart_local_source.dart';
-import 'package:shop_app/features/cart/domain/repositories/cart_repository.dart';
-import 'package:shop_app/features/cart/domain/usecases/add_to_cart.dart';
-import 'package:shop_app/features/cart/domain/usecases/clear_cart.dart';
-import 'package:shop_app/features/cart/domain/usecases/get_cart_items.dart';
-import 'package:shop_app/features/cart/domain/usecases/remove_from_cart.dart';
-import 'package:shop_app/features/cart/domain/usecases/update_quantity.dart';
-import 'package:shop_app/features/cart/presentation/bloc/cart_bloc.dart';
-
-import 'package:shop_app/features/products/data/repositories/product_repository_impl.dart';
-import 'package:shop_app/features/products/data/sources/product_remote_source.dart';
-import 'package:shop_app/features/products/domain/repositories/product_repository.dart';
-import 'package:shop_app/features/products/domain/usecases/get_categories.dart';
-import 'package:shop_app/features/products/domain/usecases/get_products.dart';
-import 'package:shop_app/features/products/presentation/bloc/product_bloc.dart';
 
 final sl = GetIt.instance;
 

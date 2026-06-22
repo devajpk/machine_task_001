@@ -1,13 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:shop_app/features/cart/presentation/pages/cart_page.dart';
-import 'package:shop_app/features/products/domain/entities/product.dart';
-import 'package:shop_app/features/products/presentation/pages/product_detail_page.dart';
-import 'package:shop_app/features/products/presentation/pages/product_list_page.dart';
+import 'package:shop_app/feature/cart/presnetation/page/cart_screen.dart';
+import 'package:shop_app/feature/products/domains/entities/product_entity.dart';
+import 'package:shop_app/feature/products/presentation/page/product_list.dart';
 
-// ─────────────────────────────────────────────────────────────────────────────
-// Route names as typed constants so every call-site is refactor-safe.
-// ─────────────────────────────────────────────────────────────────────────────
 abstract final class AppRoutes {
   static const home = '/';
   static const productDetail = '/product/:id';

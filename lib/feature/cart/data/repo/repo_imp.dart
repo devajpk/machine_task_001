@@ -1,9 +1,11 @@
-import 'package:shop_app/features/cart/data/models/cart_item_model.dart';
-import 'package:shop_app/features/cart/data/sources/cart_local_source.dart';
-import 'package:shop_app/features/cart/domain/entities/cart_item.dart';
-import 'package:shop_app/features/cart/domain/repositories/cart_repository.dart';
-import 'package:shop_app/features/products/data/models/product_model.dart';
-import 'package:shop_app/features/products/domain/entities/product.dart';
+
+
+import 'package:shop_app/feature/cart/data/cart_remote_data_Source/cart_remote_data_source.dart';
+import 'package:shop_app/feature/cart/data/model/cart_model.dart';
+import 'package:shop_app/feature/cart/domain/repo/rep.dart';
+import 'package:shop_app/feature/cart/presnetation/widget/cart_item.dart';
+import 'package:shop_app/feature/products/data/model/product_model.dart';
+import 'package:shop_app/feature/products/domains/entities/product_entity.dart';
 
 class CartRepositoryImpl implements CartRepository {
   final CartLocalSource _local;
