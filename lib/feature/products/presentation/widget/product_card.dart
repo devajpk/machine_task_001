@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
+import 'package:shop_app/core/router.dart';
+import 'package:shop_app/core/theme.dart' show AppRadius, AppSpacing;
+import 'package:shop_app/feature/cart/presnetation/bloc/cart_bloc.dart';
+import 'package:shop_app/feature/products/domains/entities/product_entity.dart';
+import 'package:shop_app/feature/products/presentation/widget/shared_widget.dart';
 
-import 'package:shop_app/core/router/app_router.dart';
-import 'package:shop_app/core/theme/app_theme.dart';
-import 'package:shop_app/features/cart/presentation/bloc/cart_bloc.dart';
-import 'package:shop_app/features/products/domain/entities/product.dart';
-import 'package:shop_app/features/products/presentation/widgets/shared_widgets.dart';
+
 
 class ProductCard extends StatelessWidget {
   final Product product;
@@ -136,7 +137,7 @@ class _AddButton extends StatelessWidget {
     return BlocBuilder<CartBloc, CartState>(
       builder: (context, state) {
         final inCart = state is CartLoaded &&
-            state.items.any((i) => i.product.id == product.id);
+            state.items.any((i) => i?.product.id == product.id);
 
         return GestureDetector(
           onTap: () {

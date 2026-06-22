@@ -1,8 +1,9 @@
 import 'package:equatable/equatable.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:shop_app/features/products/domain/entities/product.dart';
-import 'package:shop_app/features/products/domain/usecases/get_categories.dart';
-import 'package:shop_app/features/products/domain/usecases/get_products.dart';
+import 'package:shop_app/feature/products/domains/entities/product_entity.dart';
+import 'package:shop_app/feature/products/domains/use_case/get_category.dart';
+import 'package:shop_app/feature/products/domains/use_case/get_product.dart';
+
 
 // ─── Events ──────────────────────────────────────────────────────────────────
 abstract class ProductEvent extends Equatable {

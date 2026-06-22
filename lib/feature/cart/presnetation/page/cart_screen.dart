@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
-
-import 'package:shop_app/core/theme/app_theme.dart';
-import 'package:shop_app/features/cart/domain/entities/cart_item.dart';
-import 'package:shop_app/features/cart/presentation/bloc/cart_bloc.dart';
-import 'package:shop_app/features/products/presentation/widgets/shared_widgets.dart';
+import 'package:shop_app/core/theme.dart';
+import 'package:shop_app/feature/cart/presnetation/bloc/cart_bloc.dart';
+import 'package:shop_app/feature/cart/presnetation/widget/cart_item.dart';
+import 'package:shop_app/feature/products/presentation/widget/shared_widget.dart';
 
 class CartPage extends StatelessWidget {
   const CartPage({super.key});

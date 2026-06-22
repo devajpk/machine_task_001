@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
+import 'package:shop_app/core/router.dart';
+import 'package:shop_app/core/theme.dart';
 
-import 'package:shop_app/core/router/app_router.dart';
-import 'package:shop_app/core/theme/app_theme.dart';
-import 'package:shop_app/features/cart/presentation/bloc/cart_bloc.dart';
-import 'package:shop_app/features/products/presentation/bloc/product_bloc.dart';
-import 'package:shop_app/features/products/presentation/widgets/product_card.dart';
-import 'package:shop_app/features/products/presentation/widgets/shared_widgets.dart';
+import 'package:shop_app/feature/cart/presnetation/bloc/cart_bloc.dart';
+import 'package:shop_app/feature/products/presentation/bloc/product_bloc.dart';
+import 'package:shop_app/feature/products/presentation/widget/product_card.dart';
+import 'package:shop_app/feature/products/presentation/widget/shared_widget.dart';
 
 class ProductListPage extends StatefulWidget {
   const ProductListPage({super.key});
@@ -55,8 +55,8 @@ class _ProductListPageState extends State<ProductListPage> {
                         children: [
                           Text('Discover', style: tt.displayMedium),
                           Text('Find your perfect product',
-                              style: tt.bodyMedium?.copyWith(
-                                  color: cs.outline)),
+                              style:
+                                  tt.bodyMedium?.copyWith(color: cs.outline)),
                         ],
                       ),
                     ),
@@ -77,8 +77,8 @@ class _ProductListPageState extends State<ProductListPage> {
                       context.read<ProductBloc>().add(SearchProducts(q)),
                   decoration: InputDecoration(
                     hintText: 'Search products…',
-                    prefixIcon: Icon(Icons.search_rounded,
-                        color: cs.outline, size: 20),
+                    prefixIcon:
+                        Icon(Icons.search_rounded, color: cs.outline, size: 20),
                     suffixIcon: ValueListenableBuilder<TextEditingValue>(
                       valueListenable: _searchController,
                       builder: (_, value, __) => value.text.isEmpty
@@ -134,14 +134,13 @@ class _ProductListPageState extends State<ProductListPage> {
                       child: EmptyState(
                         icon: Icons.search_off_rounded,
                         title: 'No results',
-                        subtitle:
-                            'Try a different search term or category.',
+                        subtitle: 'Try a different search term or category.',
                       ),
                     );
                   }
                   return SliverPadding(
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: AppSpacing.md),
+                    padding:
+                        const EdgeInsets.symmetric(horizontal: AppSpacing.md),
                     sliver: SliverGrid(
                       gridDelegate:
                           const SliverGridDelegateWithFixedCrossAxisCount(
@@ -151,8 +150,8 @@ class _ProductListPageState extends State<ProductListPage> {
                         childAspectRatio: 0.68,
                       ),
                       delegate: SliverChildBuilderDelegate(
-                        (_, i) => ProductCard(
-                            product: state.filteredProducts[i]),
+                        (_, i) =>
+                            ProductCard(product: state.filteredProducts[i]),
                         childCount: state.filteredProducts.length,
                       ),
                     ),
@@ -179,8 +178,7 @@ class _CartBadgeButton extends StatelessWidget {
 
     return BlocBuilder<CartBloc, CartState>(
       builder: (context, state) {
-        final count =
-            state is CartLoaded ? state.totalQuantity : 0;
+        final count = state is CartLoaded ? state.totalQuantity : 0;
 
         return GestureDetector(
           onTap: () => context.push(AppRoutes.cart),
@@ -245,9 +243,7 @@ class _ThemeToggleButton extends StatelessWidget {
           borderRadius: BorderRadius.circular(AppRadius.md),
         ),
         child: Icon(
-          isDark
-              ? Icons.light_mode_rounded
-              : Icons.dark_mode_rounded,
+          isDark ? Icons.light_mode_rounded : Icons.dark_mode_rounded,
           size: 20,
         ),
       ),
@@ -293,11 +289,11 @@ class ThemeSwitcher extends InheritedWidget {
   });
 
   static ThemeSwitcher of(BuildContext context) {
-    final result =
-        context.dependOnInheritedWidgetOfExactType<ThemeSwitcher>();
+    final result = context.dependOnInheritedWidgetOfExactType<ThemeSwitcher>();
     assert(result != null, 'ThemeSwitcher not found in widget tree');
     return result!;
   }
 
   @override
   bool updateShouldNotify(ThemeSwitcher old) => false;
+}

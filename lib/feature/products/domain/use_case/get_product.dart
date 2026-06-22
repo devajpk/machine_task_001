@@ -1,5 +1,6 @@
-import 'package:shop_app/features/products/domain/entities/product.dart';
-import 'package:shop_app/features/products/domain/repositories/product_repository.dart';
+import 'package:shop_app/feature/products/domain/rep/repo.dart';
+import 'package:shop_app/feature/products/domains/entities/product_entity.dart';
+
 
 class GetProducts {
   final ProductRepository _repo;

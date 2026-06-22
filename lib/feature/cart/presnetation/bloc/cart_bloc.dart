@@ -1,8 +1,8 @@
 import 'package:equatable/equatable.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:shop_app/features/cart/domain/entities/cart_item.dart';
-import 'package:shop_app/features/cart/domain/usecases/add_to_cart.dart';
-import 'package:shop_app/features/products/domain/entities/product.dart';
+import 'package:shop_app/feature/cart/domain/use_case/add_to_cart_item.dart';
+import 'package:shop_app/feature/cart/presnetation/widget/cart_item.dart';
+import 'package:shop_app/feature/products/domains/entities/product_entity.dart';
 
 // ─── Events ──────────────────────────────────────────────────────────────────
 abstract class CartEvent extends Equatable {
@@ -53,11 +53,9 @@ class CartLoaded extends CartState {
 
   const CartLoaded(this.items);
 
-  double get total =>
-      items.fold(0.0, (sum, item) => sum + item.subtotal);
+  double get total => items.fold(0.0, (sum, item) => sum + item.subtotal);
 
-  int get totalQuantity =>
-      items.fold(0, (sum, item) => sum + item.quantity);
+  int get totalQuantity => items.fold(0, (sum, item) => sum + item.quantity);
 
   @override
   List<Object?> get props => [items];
@@ -138,3 +136,4 @@ class CartBloc extends Bloc<CartEvent, CartState> {
       emit(CartError(e.toString()));
     }
   }
+}

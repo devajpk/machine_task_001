@@ -1,4 +1,5 @@
-import 'package:shop_app/features/products/domain/repositories/product_repository.dart';
+import 'package:shop_app/feature/products/domain/rep/repo.dart';
+
 
 class GetCategories {
   final ProductRepository _repo;

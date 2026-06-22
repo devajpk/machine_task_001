@@ -1,5 +1,6 @@
-import 'package:shop_app/features/cart/domain/entities/cart_item.dart';
-import 'package:shop_app/features/products/domain/entities/product.dart';
+import 'package:shop_app/feature/cart/presnetation/widget/cart_item.dart';
+import 'package:shop_app/feature/products/domains/entities/product_entity.dart';
+
 
 abstract interface class CartRepository {
   Future<List<CartItem>> getItems();

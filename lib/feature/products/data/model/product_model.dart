@@ -1,4 +1,4 @@
-import 'package:shop_app/features/products/domain/entities/product.dart';
+import 'package:shop_app/feature/products/domains/entities/product_entity.dart';
 
 class ProductModel extends Product {
   const ProductModel({

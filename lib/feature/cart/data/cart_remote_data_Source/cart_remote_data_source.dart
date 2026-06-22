@@ -1,7 +1,5 @@
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:shop_app/features/cart/data/models/cart_item_model.dart';
-import 'package:shop_app/features/products/data/models/product_model.dart';
-import 'package:shop_app/features/products/domain/entities/product.dart';
+
 
 abstract interface class CartLocalSource {
   Future<List<CartItemModel>> getItems();

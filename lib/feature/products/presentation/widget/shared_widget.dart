@@ -1,8 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:shimmer/shimmer.dart';
-import 'package:shop_app/core/theme/app_theme.dart';
-
+import 'package:shop_app/core/theme.dart';
 // ─────────────────────────────────────────────────────────────────────────────
 // Shimmer loading card — matches product card proportions exactly so the
 // layout doesn't shift when real content arrives.

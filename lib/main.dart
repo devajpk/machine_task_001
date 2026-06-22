@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:shop_app/core/dependency_injection.dart';
+import 'package:shop_app/core/router.dart';
+import 'package:shop_app/core/theme.dart';
+import 'package:shop_app/feature/cart/presnetation/bloc/cart_bloc.dart';
+import 'package:shop_app/feature/products/presentation/bloc/product_bloc.dart';
+import 'package:shop_app/feature/products/presentation/page/product_list.dart';
 
-import 'package:shop_app/core/di/injection.dart';
-import 'package:shop_app/core/router/app_router.dart';
-import 'package:shop_app/core/theme/app_theme.dart';
-import 'package:shop_app/features/cart/presentation/bloc/cart_bloc.dart';
-import 'package:shop_app/features/products/presentation/bloc/product_bloc.dart';
-import 'package:shop_app/features/products/presentation/pages/product_list_page.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

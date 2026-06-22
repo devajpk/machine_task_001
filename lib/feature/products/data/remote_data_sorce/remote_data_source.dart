@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
-import 'package:shop_app/features/products/data/models/product_model.dart';
+import 'package:shop_app/feature/products/data/model/product_model.dart';
+
 
 abstract interface class ProductRemoteSource {
   Future<List<ProductModel>> getProducts({String? category});
