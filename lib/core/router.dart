@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:shop_app/feature/cart/presnetation/page/cart_screen.dart';
 import 'package:shop_app/feature/products/domains/entities/product_entity.dart';
+import 'package:shop_app/feature/products/presentation/page/product_detail_page.dart';
 import 'package:shop_app/feature/products/presentation/page/product_list.dart';
 
 abstract final class AppRoutes {
