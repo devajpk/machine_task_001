@@ -1,7 +1,7 @@
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:shop_app/feature/cart/data/model/cart_model.dart';
 import 'package:shop_app/feature/products/data/model/product_model.dart';
-import 'package:shop_app/feature/products/domains/entities/product_entity.dart';
+import 'package:shop_app/feature/products/domain/entities/product_entity.dart';
 
 
 abstract interface class CartLocalSource {

@@ -4,7 +4,7 @@ import 'package:go_router/go_router.dart';
 import 'package:shop_app/core/router.dart';
 import 'package:shop_app/core/theme.dart';
 import 'package:shop_app/feature/cart/presnetation/bloc/cart_bloc.dart';
-import 'package:shop_app/feature/products/domains/entities/product_entity.dart';
+import 'package:shop_app/feature/products/domain/entities/product_entity.dart';
 import 'package:shop_app/feature/products/presentation/widget/shared_widget.dart';
 class ProductDetailPage extends StatelessWidget {
   final Product product;

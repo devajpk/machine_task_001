@@ -8,8 +8,9 @@ import 'package:shop_app/feature/cart/presnetation/bloc/cart_bloc.dart';
 import 'package:shop_app/feature/products/data/remote_data_sorce/remote_data_source.dart';
 import 'package:shop_app/feature/products/data/repo_imp/repo_imp.dart';
 import 'package:shop_app/feature/products/domain/rep/repo.dart';
-import 'package:shop_app/feature/products/domains/use_case/get_category.dart';
-import 'package:shop_app/feature/products/domains/use_case/get_product.dart';
+import 'package:shop_app/feature/products/domain/use_case/get_category.dart';
+import 'package:shop_app/feature/products/domain/use_case/get_product.dart';
+
 import 'package:shop_app/feature/products/presentation/bloc/product_bloc.dart';
 
 

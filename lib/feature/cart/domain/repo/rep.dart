@@ -1,5 +1,5 @@
 import 'package:shop_app/feature/cart/presnetation/widget/cart_item.dart';
-import 'package:shop_app/feature/products/domains/entities/product_entity.dart';
+import 'package:shop_app/feature/products/domain/entities/product_entity.dart';
 
 
 abstract interface class CartRepository {

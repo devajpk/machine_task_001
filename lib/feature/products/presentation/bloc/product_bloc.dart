@@ -1,8 +1,9 @@
 import 'package:equatable/equatable.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:shop_app/feature/products/domains/entities/product_entity.dart';
-import 'package:shop_app/feature/products/domains/use_case/get_category.dart';
-import 'package:shop_app/feature/products/domains/use_case/get_product.dart';
+import 'package:shop_app/feature/products/domain/entities/product_entity.dart';
+import 'package:shop_app/feature/products/domain/use_case/get_category.dart';
+import 'package:shop_app/feature/products/domain/use_case/get_product.dart';
+
 
 
 // ─── Events ──────────────────────────────────────────────────────────────────

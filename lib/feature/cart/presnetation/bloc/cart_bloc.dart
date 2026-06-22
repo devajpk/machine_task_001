@@ -2,7 +2,7 @@ import 'package:equatable/equatable.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:shop_app/feature/cart/domain/use_case/add_to_cart_item.dart';
 import 'package:shop_app/feature/cart/presnetation/widget/cart_item.dart';
-import 'package:shop_app/feature/products/domains/entities/product_entity.dart';
+import 'package:shop_app/feature/products/domain/entities/product_entity.dart';
 
 // ─── Events ──────────────────────────────────────────────────────────────────
 abstract class CartEvent extends Equatable {
